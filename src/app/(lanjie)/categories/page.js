@@ -21,7 +21,7 @@ export default async function CategoriesPage({ searchParams }) {
 
   return (
     <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
-      <h1 className="text-2xl font-bold mb-4 sm:mb-8">文章分类</h1>
+      <h1 className="text-base sm:text-xl font-bold mb-4 sm:mb-6">文章分类</h1>
       <CategoryTabs />
       <ListData 
         posts={paginatedPosts}

@@ -20,7 +20,7 @@ export default function ListData({
 
   return (
     <div className={containerClassName}>
-      {title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
+      {title && <h1 className="text-base sm:text-xl font-bold mb-4 sm:mb-6">{title}</h1>}
       <div className={`grid gap-6 grid-cols-1 md:grid-cols-2 ${className}`}>
         {posts.map(post => (
           <Link 
@@ -42,8 +42,8 @@ export default function ListData({
                     {getCategoryName(post.categoryId)}
                   </span>
                 </div>
-                <CardTitle>{post.title}</CardTitle>
-                <CardDescription>{post.description}</CardDescription>
+                <CardTitle className="line-clamp-1">{post.title}</CardTitle>
+                <CardDescription className="line-clamp-2">{post.description}</CardDescription>
               </CardHeader>
             </Card>
           </Link>
