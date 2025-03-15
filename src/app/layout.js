@@ -1,18 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Quicksand } from "next/font/google"
 import { ThemeProvider } from "next-themes"
 import { Toaster } from "sonner"
 import "./globals.css"
 import Navbar from '@/components/Navbar'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Quicksand({
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+ 
 
 export const metadata = {
   title: '我的博客',
@@ -23,7 +20,7 @@ export default function RootLayout({ children, modal }) {
   return (
     <html lang="zh" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"
