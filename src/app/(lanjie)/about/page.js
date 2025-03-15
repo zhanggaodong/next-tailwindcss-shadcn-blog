@@ -3,7 +3,7 @@
 export default async function AboutPage() {
 
   return (
-    <article className="container mx-auto px-4 py-8 max-w-4xl">
+    <article className="container mx-auto px-4 py-4 sm:py-8 max-w-4xl">
       <h1 className="text-base sm:text-xl font-bold mb-4 sm:mb-6">关于</h1>
       
       <div className="prose prose-lg prose-gray max-w-none">
