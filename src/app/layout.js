@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google"
 import { ThemeProvider } from "next-themes"
+import { Toaster } from "sonner"
 import "./globals.css"
 import Navbar from '@/components/Navbar'
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children, modal }) {
           <Navbar />
           {children}
           {modal}
+          <Toaster position="top-center" expand={false}  richColors />
         </ThemeProvider>
       </body>
     </html>

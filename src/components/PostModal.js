@@ -6,6 +6,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from './ui/dialog'
+import { Button } from './ui/button'
+import { Share2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 export default function PostModal({ post, isOpen, onClose }) {
   const currentPost = {
@@ -72,8 +75,38 @@ export default function PostModal({ post, isOpen, onClose }) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="h-[calc(100vh-60px)] flex flex-col">
         <DialogHeader className="flex-none">
-          <DialogTitle className="text-2xl">{currentPost.title}</DialogTitle>
-          <div className="text-sm text-gray-500 mt-2">{currentPost.date}</div>
+          <div className="flex justify-between items-start">
+            <div>
+              <div className='flex mr-10'>
+              <DialogTitle className="text-2xl">{currentPost.title}</DialogTitle>
+              <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(window.location.href);
+                      toast.success('复制成功', {
+                        duration: 2000,
+                        className: 'text-center'
+                      });
+                    } catch (err) {
+                      console.error('复制失败:', err);
+                      toast.error('复制失败', {
+                        duration: 2000,
+                        className: 'text-center'
+                      });
+                    }
+                  }}
+                  className="gap-2 ml-5"
+                >
+                  <Share2 className="w-4 h-4" />
+                  
+                </Button>
+              </div>
+              <div className="text-sm text-gray-500 mt-2">{currentPost.date}</div>
+            </div>
+            
+          </div>
         </DialogHeader>
         <div className="flex-1 overflow-y-auto min-h-0">
           <div className="prose prose-gray">
