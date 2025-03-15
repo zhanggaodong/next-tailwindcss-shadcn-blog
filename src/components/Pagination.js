@@ -15,11 +15,13 @@ export default function Pagination({ totalPages }) {
   }
 
   return (
-    <div className="flex justify-center gap-2 mt-8">
+    <div className="flex justify-center gap-1 sm:gap-2 mt-4 sm:mt-8">
       <Button
         variant="outline"
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage <= 1}
+        size="sm"
+        className="sm:size-default"
       >
         上一页
       </Button>
@@ -29,6 +31,8 @@ export default function Pagination({ totalPages }) {
           key={page}
           variant={currentPage === page ? "default" : "outline"}
           onClick={() => handlePageChange(page)}
+          size="sm"
+          className="sm:size-default"
         >
           {page}
         </Button>
@@ -38,6 +42,8 @@ export default function Pagination({ totalPages }) {
         variant="outline"
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage >= totalPages}
+        size="sm"
+        className="sm:size-default"
       >
         下一页
       </Button>

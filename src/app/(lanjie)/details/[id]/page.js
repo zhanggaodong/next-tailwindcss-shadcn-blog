@@ -16,17 +16,17 @@ export default async function PostDetailPage({ params }) {
   }
 
   return (
-    <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
-      <Card>
-        <CardHeader>
-          <div className="flex justify-between items-center mb-4">
+    <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-8">
+      <Card className="py-0 mt-3">
+        <CardHeader className="sm:p-6 p-4">
+          <div className="flex justify-between items-center mb-2 sm:mb-4">
             <span className="text-sm text-gray-500">{post.date}</span>
             <span className="text-sm bg-secondary px-2 py-1 rounded">
               {getCategoryName(post.categoryId)}
             </span>
           </div>
-          <CardTitle className="text-2xl mb-6">{post.title}</CardTitle>
-          <div className="prose prose-gray max-w-none">
+          <CardTitle className="text-xl sm:text-2xl mb-3 sm:mb-6">{post.title}</CardTitle>
+          <div className="prose prose-gray max-w-none prose-p:my-2 sm:prose-p:my-4 prose-headings:my-3 sm:prose-headings:my-6">
             <div className="whitespace-pre-wrap">
               {post.content || `这是文章 ${post.id} 的详细内容。这里可以放置 Markdown 内容或者其他格式的文章内容。
 

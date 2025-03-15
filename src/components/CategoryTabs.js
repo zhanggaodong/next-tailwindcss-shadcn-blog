@@ -21,10 +21,12 @@ export default function CategoryTabs() {
   }
 
   return (
-    <div className="flex gap-2 mb-8 flex-wrap">
+    <div className="flex gap-1 sm:gap-2 mb-4 sm:mb-8 flex-wrap">
       <Button
         variant={!currentCategory ? "default" : "outline"}
         onClick={() => handleCategoryClick(null)}
+        size="sm"
+        className="sm:size-default"
       >
         全部
       </Button>
@@ -33,6 +35,8 @@ export default function CategoryTabs() {
           key={category.id}
           variant={currentCategory === category.id.toString() ? "default" : "outline"}
           onClick={() => handleCategoryClick(category.id)}
+          size="sm"
+          className="sm:size-default"
         >
           {category.name}
         </Button>
