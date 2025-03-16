@@ -4,7 +4,7 @@ import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   return (
-    <nav className="border-b">
+    <nav className="fixed top-0 left-0 right-0 border-b bg-background/30 backdrop-blur-3xl z-50">
       <div className="container mx-auto px-2 sm:px-4 h-16 flex items-center justify-between">
         <Link href="/" className="text-base sm:text-xl font-bold whitespace-nowrap">
           五河湾

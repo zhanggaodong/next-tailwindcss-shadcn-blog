@@ -119,14 +119,14 @@ export default function PhotoGallery() {
   return (
     <>
       <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8 max-w-7xl">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">照片墙</h1>
+        <h1 className="text-base sm:text-xl font-bold mb-4 sm:mb-6">照片墙</h1>
         
         {/* 年份循环 */}
         {Object.entries(groupedPhotos)
           .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
           .map(([year, months]) => (
             <div key={year} className="mb-8 sm:mb-16">
-              <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 sticky top-0 bg-background/95 backdrop-blur py-2 sm:py-4 z-10">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
                 {year}年
               </h2>
               

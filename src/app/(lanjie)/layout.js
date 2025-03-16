@@ -1,15 +1,18 @@
+import Navbar from '@/components/Navbar'
+
 export default function PingLayout({
   children,
   model,
 }) {
   return ( 
     <div className="min-h-screen flex flex-col"> 
-      <main className="flex-1">
+      <Navbar />
+      <main className="flex-1 pt-16">
         {children}
         {model}
       </main> 
       <footer className="py-4 sm:py-6 text-center text-sm text-muted-foreground bg-background border-t">
-        <p>骄傲地使用 Next.js + Tailwind CSS + Shadcn/ui 构建 ❤️</p>
+        <p>使用Claude+Next.js+TailwindCSS+Shadcn/ui构建❤️</p>
       </footer>
     </div>
   );
