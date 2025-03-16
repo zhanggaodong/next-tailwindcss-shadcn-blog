@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
         <div className="relative w-32 h-32 sm:w-48 sm:h-48 rounded-2xl overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/christmas1/800/600"
+            src="/logo.png"
             alt="头像"
             fill
             className="object-cover"
