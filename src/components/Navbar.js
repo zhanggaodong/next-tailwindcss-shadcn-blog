@@ -7,14 +7,17 @@ export default function Navbar() {
     <nav className="border-b">
       <div className="container mx-auto px-2 sm:px-4 h-16 flex items-center justify-between">
         <Link href="/" className="text-base sm:text-xl font-bold whitespace-nowrap">
-          我的博客
+          五河湾
         </Link>
         <div className="flex items-center space-x-1 sm:space-x-4">
           <Button variant="ghost" size="sm" className="sm:size-default" asChild>
             <Link href="/">首页</Link>
           </Button>
           <Button variant="ghost" size="sm" className="sm:size-default" asChild>
-            <Link href="/categories">分类</Link>
+            <Link href="/categories">文章</Link>
+          </Button>
+          <Button variant="ghost" size="sm" className="sm:size-default" asChild>
+            <Link href="/photo">照片</Link>
           </Button>
           <Button variant="ghost" size="sm" className="sm:size-default" asChild>
             <Link href="/about">关于</Link>
